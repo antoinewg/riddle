@@ -15,3 +15,6 @@ train:
 
 board:
 	@tensorboard --logdir logs/scalars
+
+clear:
+	@rm -rf logs/scalars
