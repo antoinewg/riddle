@@ -1,4 +1,19 @@
+from datetime import datetime
+
 import tensorflow as tf
+from tensorflow.keras import callbacks
+
+import os
+
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+now = datetime.now().strftime("%Y%m%d-%H%M%S")
+logdir = os.path.join(BASE_DIR, "logs/scalars/") + now
+tensorboard_callback = callbacks.TensorBoard(
+    log_dir=logdir, histogram_freq=1, profile_batch="500,520"
+)
+
 
 # 1/ Load dataset
 mnist = tf.keras.datasets.mnist
@@ -19,7 +34,7 @@ loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
 
 # 3/ Train model
-model.fit(x_train, y_train, epochs=5)
+model.fit(x_train, y_train, epochs=20, callbacks=[tensorboard_callback])
 
 # 4/ Evaluate model
 model.evaluate(x_test, y_test, verbose=2)
