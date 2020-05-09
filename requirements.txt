@@ -1,8 +1,11 @@
+appdirs==1.4.3
 appnope==0.1.0
 attrs==19.3.0
 backcall==0.1.0
+black==19.10b0
 certifi==2020.4.5.1
 chardet==3.0.4
+click==7.1.2
 codecov==2.0.22
 coverage==5.1
 decorator==4.4.2
@@ -15,6 +18,7 @@ jedi==0.17.0
 more-itertools==8.2.0
 packaging==20.3
 parso==0.7.0
+pathspec==0.8.0
 pexpect==4.8.0
 pickleshare==0.7.5
 pluggy==0.13.1
@@ -25,9 +29,12 @@ Pygments==2.6.1
 pyparsing==2.4.7
 pytest==5.4.2
 pytest-cov==2.8.1
+regex==2020.5.7
 requests==2.23.0
 six==1.14.0
+toml==0.10.0
 traitlets==4.3.3
+typed-ast==1.4.1
 urllib3==1.25.9
 wcwidth==0.1.9
 zipp==3.1.0
