@@ -18,3 +18,5 @@ __pypackages__/
 
 # Environments
 venv/
+
+logs

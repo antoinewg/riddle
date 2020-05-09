@@ -13,6 +13,11 @@
 
 You're ready to go 🚀!
 
+### Development
+
+- Train and evaluate model: `make train`
+- Open tensorboard: `make board`
+
 ### Source
 
 Original inspiration: [Learning to Communicate to Solve Riddles with Deep Distributed Recurrent Q-Networks](https://arxiv.org/pdf/1602.02672.pdf)

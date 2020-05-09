@@ -7,5 +7,11 @@ freeze:
 lint:
 	black .
 
-test:
+unitest:
 	python3 -m pytest
+
+train:
+	@python src/main.py
+
+board:
+	@tensorboard --logdir logs/scalars
